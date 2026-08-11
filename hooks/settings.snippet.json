@@ -1,0 +1,41 @@
+{
+  "//": "Merge these entries into the hooks section of your settings.json. If a hook event already has entries, append the board hook to its hooks array. Assumes board-register.sh is installed at ~/.claude/hooks/ and executable.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/board-register.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/board-register.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/board-register.sh",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
