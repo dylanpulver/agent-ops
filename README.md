@@ -1,5 +1,7 @@
 # agent-ops
 
+[![CI](https://github.com/dylanpulver/agent-ops/actions/workflows/ci.yml/badge.svg)](https://github.com/dylanpulver/agent-ops/actions/workflows/ci.yml)
+
 **How to run Claude Code as a team of agents.**
 
 Operational patterns for running many Claude Code sessions in parallel — across terminals,
