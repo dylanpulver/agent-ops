@@ -83,3 +83,7 @@ Then read the patterns in order. Each one stands alone, but 01–03 are the core
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+Built by [Dylan Pulver](https://dylanpulver.com), software engineer and entrepreneur in Toronto.
