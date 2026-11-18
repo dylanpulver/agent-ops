@@ -27,10 +27,23 @@ chmod +x ~/.claude/hooks/board-register.sh
 
 # 2. Merge hooks/settings.snippet.json into ~/.claude/settings.json
 
-# 3. Teach your sessions the protocol (global CLAUDE.md):
-#    "Before starting batch-type work on a shared resource, read
-#     ~/.claude-sessions/board.jsonl and check for a sibling session
+# 3. Install the check
+cp hooks/board-check.sh ~/.claude/hooks/
+chmod +x ~/.claude/hooks/board-check.sh
+
+# 4. Teach your sessions the protocol (global CLAUDE.md):
+#    "Before starting batch-type work on a shared resource, run
+#     ~/.claude/hooks/board-check.sh and look for a sibling session
 #     in the same repo with overlapping intent."
+```
+
+The check prints the other sessions in the current repo and exits 1 when there are any:
+
+```console
+$ ~/.claude/hooks/board-check.sh
+other sessions in /home/me/code/api:
+a1f3  .claude  2026-11-14 19:14  migrate the orders table to the new schema
+7c2e  .claude-work  2026-11-14 19:14  sweep the flaky test backlog
 ```
 
 Then read the patterns in order. Each one stands alone, but 01–03 are the core loop.
